@@ -278,7 +278,7 @@ ul {
 }
 
 .banner h1 {
-  animation: growText 6s infinite ease;
+  animation: growText 60s infinite ease;
 }
 
 @keyframes jumpAnimation {
