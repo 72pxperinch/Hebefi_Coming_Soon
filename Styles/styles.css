@@ -1,0 +1,391 @@
+/* Global Styles */
+html {
+  box-sizing: border-box;
+  font-family: "Cormorant Garamond", serif;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: BasicFont;
+  src: url(../Fonts/Oldsman-No.1.otf);
+}
+
+body {
+  scroll-snap-type: y mandatory;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+body,
+h1,
+h2,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Next Page Arrow Styles */
+.nextPage {
+  position: absolute;
+  bottom: 20px;
+}
+
+.nextPage a {
+  text-decoration: none;
+}
+
+.nextPage p {
+  padding-bottom: 15px;
+  color: black;
+  max-width: 80vw;
+  text-align: center;
+}
+
+.arrowDownWrapper {
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  width: 1px;
+}
+
+.arrowDown,
+.arrowDown::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 3px;
+  border-radius: 10px;
+  background-color: #000;
+  margin: 5px 0px;
+  transition: 0.4s;
+}
+
+.arrowDown {
+  transform: rotate(30deg) translate(-25px, 10px);
+}
+
+.arrowDown::after {
+  transform: rotate(120deg) translate(-20.5px, -11.5px);
+}
+
+/* Previous Page Arrow Styles */
+.prevPage {
+  position: relative;
+  z-index: 50;
+  width: 200px;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prevPage a {
+  text-decoration: none;
+}
+
+.prevPage p {
+  padding-top: 15px;
+  color: black;
+  max-width: 80vw;
+  text-align: center;
+}
+
+.arrowUpWrapper {
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  width: 1px;
+}
+
+.arrowUp,
+.arrowUp::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 3px;
+  border-radius: 10px;
+  background-color: #000;
+  margin: 5px 0px;
+  transition: 0.4s;
+}
+
+.arrowUp {
+  transform: rotate(210deg) translate(0px, 0px);
+}
+
+.arrowUp::after {
+  transform: rotate(120deg) translate(-20.5px, -11.5px);
+}
+
+/* Common styles for section content */
+.section-content {
+  margin: 0 auto;
+  text-align: center;
+}
+/* Common styles for section content */
+.section-content p {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hebefi-section img {
+  opacity: 10%;
+  margin: 50px;
+  max-width: 500px;
+}
+.sgView {
+  text-align: center;
+  display: none;
+}
+/* Section Styles */
+.hebefi-section,
+.certified-section,
+.connect-section,
+.banner {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  background-color: white;
+}
+
+.bannerLogoDiv {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bannerLogo {
+  opacity: 5%;
+  position: absolute;
+  width: 400px;
+  top: -130px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.banner h1 {
+  font-size: 100px;
+  font-family: BasicFont;
+}
+.certLogos {
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  border-width: 2px;
+  flex-direction: row;
+  display: flex;
+  max-width: 1080px;
+  width: 80vw;
+  justify-content: center;
+  align-items: center;
+}
+.certLogos img {
+  width: 40%;
+  padding: 5%;
+  max-width: 400px;
+  opacity: 25%;
+}
+/* Section Content Styles */
+.hebefi-section,
+.certified-section,
+.connect-section {
+  h2,
+  p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+}
+
+/* Heading Styles */
+.hebefi-section h2,
+.certified-section h2,
+.connect-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.joinUsP {
+  margin-top: 50px;
+}
+/* Know More Button Styles */
+.know-more-btn {
+  margin-top: 50px;
+  padding: 15px 40px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 0;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+}
+
+.know-more-btn:hover {
+  background-color: #eee; /* Darker green on hover */
+}
+
+/* Footer Styles */
+.footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.footerDivider {
+  width: 100%;
+  height: 1px;
+  background-color: black;
+}
+
+.Copyright {
+  text-align: center;
+  margin: 10px;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+/* _______________________ANIMATION________________________ */
+
+@keyframes growText {
+  0% {
+    transform: scale(1);
+    letter-spacing: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    letter-spacing: 20px;
+  }
+  100% {
+    transform: scale(1);
+    letter-spacing: 0;
+  }
+}
+
+.banner h1 {
+  animation: growText 6s infinite ease;
+}
+
+@keyframes jumpAnimation {
+  0%,
+  80%,
+  90%,
+  100% {
+    transform: translateY(0); /* Initial and final position */
+  }
+  85%,
+  95% {
+    transform: translateY(-20px); /* Jump up position with ease effect */
+  }
+}
+
+.nextPage p {
+  animation: jumpAnimation 5s ease infinite; /* Infinite jumps with ease effect */
+}
+
+/* _______________________RESPONSIVENESS________________________ */
+
+@media screen and (max-width: 830px) {
+  .banner,
+  .hebefi-section,
+  .certified-section,
+  .connect-section {
+    width: 100vw;
+  }
+  .section-content {
+    width: 90%;
+  }
+
+  .certLogos {
+    width: 100%;
+  }
+
+  .hebefi-section img {
+    opacity: 10%;
+    margin: 50px 0px;
+    width: 90%;
+  }
+  .banner h1 {
+    width: 100vw;
+    text-align: center;
+  }
+
+  .lgView {
+    display: none;
+  }
+  .sgView {
+    text-align: center;
+    display: block;
+  }
+  .bannerLogo {
+    top: -80px;
+  }
+}
+
+/* Add this at the end of your existing CSS */
+/* Add this CSS rule at the end of your existing CSS */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* .section-content.in-view {
+  animation: fadeIn 1s ease-in-out;
+} */
+
+/* Optional: Adjust the animation duration and easing as needed */
+
+@media screen and (max-width: 543px) {
+  .hebefi-section,
+  .certified-section,
+  .connect-section {
+    width: 100vw;
+  }
+  .section-content {
+    font-size: 16px;
+  }
+  .banner h1 {
+    font-size: 75px;
+    text-align: center;
+    align-items: center;
+    width: 400px;
+  }
+
+  .know-more-btn {
+    font-size: 18px;
+  }
+  .nextPage {
+    font-size: 16px;
+  }
+  .arrowDown,
+  .arrowDown::after,
+  .arrowUp,
+  .arrowUp::after {
+    height: 2px;
+  }
+
+  .bannerLogo {
+    width: 95%;
+    max-width: 300px;
+    top: -70px;
+  }
+}

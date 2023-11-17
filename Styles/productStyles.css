@@ -1,0 +1,129 @@
+/* Global Styles */
+html {
+  box-sizing: border-box;
+  font-family: "Cormorant Garamond", serif;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: BasicFont;
+  src: url(../Fonts/Oldsman-No.1.otf);
+}
+
+body {
+  scroll-snap-type: y mandatory;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body,
+h1,
+h2,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.sgView {
+  text-align: center;
+  display: none;
+}
+.banner {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  background-color: white;
+}
+
+.bannerLogoDiv {
+  position: relative;
+}
+
+.bannerLogoGif {
+  opacity: 5%;
+  position: absolute;
+  width: 500px;
+  top: -200px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.banner h1 {
+  font-size: 100px;
+  font-family: BasicFont;
+  position: relative;
+  left: 15px;
+}
+/* Footer Styles */
+.footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.footerDivider {
+  width: 100%;
+  height: 1px;
+  background-color: black;
+}
+
+.Copyright {
+  text-align: center;
+  margin: 10px;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+
+
+/* _______________________RESPONSIVENESS________________________ */
+
+@media only screen and (max-width: 830px) {
+  .section-content {
+    width: 90%;
+  }
+
+  .banner h1 {
+    width: 100vw;
+    text-align: center;
+    position: relative;
+    left: 0;
+  }
+
+  .lgView {
+    display: none;
+  }
+  .sgView {
+    text-align: center;
+    display: block;
+  }
+  .bannerLogoGif {
+  top: -140px;
+  }
+}
+
+
+@media only screen and (max-width: 543px) {
+  .banner h1 {
+    font-size: 75px;
+    text-align: center;
+    align-items: center;
+    width: 600px;
+  }
+
+
+  .bannerLogoGif {
+    width: 95%;
+    max-width: 500px;
+    top: -170px;
+  }
+}
