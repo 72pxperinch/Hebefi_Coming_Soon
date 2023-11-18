@@ -117,7 +117,9 @@
 
 /* Responsive Styles */
 @media screen and (max-width: 767px) {
-
+  .navbar {
+    position: fixed;
+  }
   .Logo {
     width: 100%;
     display: flex;
@@ -162,7 +164,7 @@
     flex-direction: column;
     width: 100%;
   }
-  .menu-items li{
+  .menu-items li {
     width: 100%;
     text-align: center;
   }
