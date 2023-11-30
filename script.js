@@ -4,7 +4,12 @@ window.onload = function () {
   const menu_btn = document.querySelector(".hamburger");
 
   const menu = document.querySelector(".menu");
+  const navLink = document.querySelector(".nav-link");
   menu_btn.addEventListener("click", function () {
+    menu_btn.classList.toggle("is-active");
+    menu.classList.toggle("menu-down");
+  });
+  navLink.addEventListener("click", function () {
     menu_btn.classList.toggle("is-active");
     menu.classList.toggle("menu-down");
   });
